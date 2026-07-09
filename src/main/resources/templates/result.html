@@ -3,7 +3,8 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Wollok AutoGrader</title>
+    <title>Resultado</title>
+
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
@@ -11,17 +12,17 @@
     <h1>Wollok AutoGrader</h1>
 </header>
 <main>
-    <h2>Bienvenido</h2>
+    <h2>Resultado de la corrección</h2>
     <p>
-        Sistema Open Source para la corrección automática de ejercicios de Wollok.
+        <strong>Correcto:</strong>
+        <span th:text="${result.success}"></span>
     </p>
     <p>
-        🚧 MVP - Work in Progress
+        <strong>Salida:</strong>
+        <span th:text="${result.output}"></span>
     </p>
     <hr>
-    <p>
-        <a href="/correct">Corregir ejercicio de prueba</a>
-    </p>
+    <a href="/">Volver</a>
 </main>
 <footer>
     Versión 0.0.1
